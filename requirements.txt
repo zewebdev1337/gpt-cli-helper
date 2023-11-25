@@ -1,0 +1,3 @@
+openai
+pyinstaller
+python-dotenv
