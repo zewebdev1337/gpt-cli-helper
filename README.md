@@ -38,7 +38,7 @@ $ gpt format in github markdown for a link?
 ```
 
 ## NOTICE
-If your question contains quotes, be sure to wrap it with another type of quote or it will mess up with the syntax and return an erro
+If your question contains quotes, be sure to wrap it with another type of quote or it will mess up with the syntax and return an error
 
 Example:
 
@@ -46,7 +46,7 @@ Example:
 $ gpt "what's the command to list all files in cd"
 ls
 $ gpt 'say "hello, world!" in Japanese'
-こんにちは世界
+こんにちは世界!
 ```
 
 ## License
