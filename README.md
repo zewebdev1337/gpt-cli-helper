@@ -37,6 +37,18 @@ $ gpt format in github markdown for a link?
 `[link text](URL)`
 ```
 
+## NOTICE
+If your question contains quotes, be sure to wrap it with another type of quote or it will mess up with the syntax and return an erro
+
+Example:
+
+```bash
+$ gpt "what's the command to list all files in cd"
+ls
+$ gpt 'say "hello, world!" in Japanese'
+こんにちは世界
+```
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
