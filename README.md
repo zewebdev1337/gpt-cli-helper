@@ -22,7 +22,7 @@ The `install.sh` script will perform the following actions:
 ## Requirements
 
 - Python 3.6 or higher
-- Set up your API Key in a .env file, see [.env.example](.env.example)
+- OpenAI API Key
 
 ## Usage
 
@@ -31,9 +31,9 @@ After installation, you can use the `gpt` command to ask questions.
 Example:
 
 ```bash
-gpt exit from active python venv?
+$ gpt exit from active python venv?
 deactivate
-gpt format in github markdown for a link?
+$ gpt format in github markdown for a link?
 `[link text](URL)`
 ```
 
