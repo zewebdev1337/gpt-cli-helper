@@ -31,7 +31,7 @@ After installation, you can use the `gpt` command to ask questions.
 Example:
 
 ```bash
-gpt exit from python venv sourced?
+gpt exit from active python venv?
 deactivate
 gpt format in github markdown for a link?
 `[link text](URL)`
