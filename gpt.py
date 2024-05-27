@@ -20,7 +20,7 @@ client = OpenAI(api_key=api_key)
 
 def ask_question(question):
     try:
-        response = client.chat.completions.create(model="gpt-4-1106-preview",
+        response = client.chat.completions.create(model="gpt-4o",
         temperature=0,
         max_tokens=500,
         messages=[
