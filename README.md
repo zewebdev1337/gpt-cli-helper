@@ -50,6 +50,17 @@ After installation, you can use the `gpt` command to ask questions.
   $ gpt 3.5 How to change directory in Linux?
   cd <directory_name>
   ```
+  **NOTICE:**
+  
+  If your question contains quotes, be sure to wrap it with another type of quote, otherwise it will mess up with the syntax and return an error.
+
+  Example:
+  ```bash
+  $ gpt "what's the command to list all files in cd"
+  ls
+  $ gpt 'say "hello, world!" in Japanese'
+  こんにちは世界!
+  ```
 
 - **Add Model:**
   ```bash
@@ -87,7 +98,7 @@ After installation, you can use the `gpt` command to ask questions.
   $ gpt default_verbose
   Verbose mode enabled
   ```
-  Example uptput with verbose mode:
+  Example output with verbose mode:
   ```bash
   $ gpt exit from active python venv?
   Model: gpt-4o, Temperature: 0
@@ -114,18 +125,6 @@ After installation, you can use the `gpt` command to ask questions.
   }
   ```
 
-### NOTICE
-If your question contains quotes, be sure to wrap it with another type of quote, otherwise it will mess up with the syntax and return an error.
-
-Example:
-
-```bash
-$ gpt "what's the command to list all files in cd"
-ls
-$ gpt 'say "hello, world!" in Japanese'
-こんにちは世界!
-```
-
 ## Configuration
 
 ### Configuration File Location
@@ -141,6 +140,9 @@ Starting from v2.0 you can configure several options:
 - **Verbose Mode:** Enable or disable verbose mode.
 - **Add Model:** Add a new model to the model list.
 
+## Compatibility
+
+The tool is designed for Linux and support for other OSes is not planned.
 
 ## License
 
