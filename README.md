@@ -1,6 +1,6 @@
 # GPT Command Line Helper
 
-Ever forget a command's name, syntax or options and just want to get it done quickly without [RTFM](https://en.wikipedia.org/wiki/RTFM) or even whipping out a browser? Ask GPT from your CLI!
+Ever forget a command's name, syntax, or options and just want to get it done quickly without [RTFM](https://en.wikipedia.org/wiki/RTFM) or even whipping out a browser? Ask GPT from your CLI!
 
 ## Installation
 
@@ -13,7 +13,7 @@ sudo ./install.sh
 
 The `install.sh` script will perform the following actions:
 
-1. Create and activate virtual python environment.
+1. Create and activate a virtual Python environment.
 2. Install pip dependencies.
 3. Use PyInstaller to create a standalone executable.
 4. Move the executable to `/usr/local/bin/` for easy access.
@@ -27,18 +27,95 @@ The `install.sh` script will perform the following actions:
 ## Usage
 
 After installation, you can use the `gpt` command to ask questions.
+## Commands
 
-Example:
+- **Basic command:**
 
-```bash
-$ gpt exit from active python venv?
-deactivate
-$ gpt format in github markdown for a link?
-`[link text](URL)`
-```
+  ```bash
+  gpt <question>
+  ```
 
-## NOTICE
-If your question contains quotes, be sure to wrap it with another type of quote or it will mess up with the syntax and return an error
+  Example:
+  ```bash
+  $ gpt format in github markdown for a link?
+  `[link text](URL)`
+  ```
+
+- **Ask a Question:**
+  ```bash
+  gpt [<model>] <question> [--temp=<TEMP>] [--verbose]
+  ```
+  Example:
+  ```bash
+  $ gpt 3.5 How to change directory in Linux?
+  cd <directory_name>
+  ```
+
+- **Add Model:**
+  ```bash
+  gpt add_model <MODEL_SHORT_NAME> <MODEL_NAME>
+  ```
+  Example:
+  ```bash
+  $ gpt add_model 4-turbo-preview gpt-4-turbo-preview
+  ```
+
+- **Set Default Model:**
+  ```bash
+  gpt default_model <DEFAULT_MODEL>
+  ```
+  Example:
+  ```bash
+  $ gpt default_model 4-turbo-preview
+  ```
+
+- **Set Default Temperature:**
+  ```bash
+  gpt default_temp <TEMP>
+  ```
+  Example:
+  ```bash
+  $ gpt default_temp 0.5
+  ```
+
+- **Toggle Verbose Mode:**
+  ```bash
+  gpt default_verbose
+  ```
+  Example:
+  ```bash
+  $ gpt default_verbose
+  Verbose mode enabled
+  ```
+  Example uptput with verbose mode:
+  ```bash
+  $ gpt exit from active python venv?
+  Model: gpt-4o, Temperature: 0
+  deactivate
+  ```
+
+- **Show Current Config:**
+  ```bash
+  gpt current_config
+  ```
+  Example output:
+  ```bash
+  $ gpt current_config
+  {
+      "default_model": "4o",
+      "default_temp": 0,
+      "verbose": false,
+      "models": {
+          "3.5": "gpt-3.5-turbo",
+          "4": "gpt-4",
+          "4-turbo": "gpt-4-turbo",
+          "4o": "gpt-4o"
+      }
+  }
+  ```
+
+### NOTICE
+If your question contains quotes, be sure to wrap it with another type of quote, otherwise it will mess up with the syntax and return an error.
 
 Example:
 
@@ -48,6 +125,22 @@ ls
 $ gpt 'say "hello, world!" in Japanese'
 こんにちは世界!
 ```
+
+## Configuration
+
+### Configuration File Location
+
+The configuration file is located at `~/.gpt-cli`
+
+### Configuration Options
+
+Starting from v2.0 you can configure several options:
+
+- **Default Model:** Change the default model used.
+- **Default Temperature:** Change the default temperature for responses.
+- **Verbose Mode:** Enable or disable verbose mode.
+- **Add Model:** Add a new model to the model list.
+
 
 ## License
 
