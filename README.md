@@ -124,14 +124,22 @@ After installation, you can use the `gpt` command to ask questions.
       }
   }
   ```
-
+- **Default settings:**
+  - **Default model:** `gpt-4o`
+  - **Default temperature:** `0`
+  - **Verbose mode:** `Disabled`
+  - **Available models:**
+    - `gpt-3.5-turbo`
+    - `gpt-4`
+    - `gpt-4-turbo`
+    - `gpt-4o`
 ## Configuration
 
-### Configuration File Location
+### Configuration file location
 
 The configuration file is located at `~/.gpt-cli`
 
-### Configuration Options
+### Configuration options
 
 Starting from v2.0 you can configure several options:
 
@@ -140,9 +148,16 @@ Starting from v2.0 you can configure several options:
 - **Verbose Mode:** Enable or disable verbose mode.
 - **Add Model:** Add a new model to the model list.
 
+### Modify defaults
+
+Modify `default_config.json` before running the install script.
+
 ## Compatibility
 
-The tool is designed for Linux and support for other OSes is not planned. If you want support for other OS, please fork or mirror the repo. PRs and issues regarding support for other OSes will be closed as `Will not implement`
+The tool is designed for Linux and support for other OSes is not planned. 
+If you want support for other OS, please fork or mirror the repo. 
+
+PRs and issues regarding support for other OSes will be closed as `Will not implement`
 
 ## License
 

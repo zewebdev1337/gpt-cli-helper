@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
+    """ Get absolute path to resource, works for development environment and binary """
     try:
         base_path = sys._MEIPASS
     except Exception:
@@ -19,21 +19,13 @@ api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
 
 def load_config():
+    default_config_path = resource_path("default_config.json")
     config_path = os.path.expanduser("~/.gpt-cli")
     if not os.path.exists(config_path):
-        default_config = {
-            "default_model": "4o",
-            "default_temp": 0,
-            "verbose": False,
-            "models": {
-                "3.5": "gpt-3.5-turbo",
-                "4": "gpt-4",
-                "4-turbo": "gpt-4-turbo",
-                "4o": "gpt-4o"
-            }
-        }
-        save_config(default_config)
-        return default_config
+        with open(default_config_path, 'r') as f:
+            default_config = json.load(f)
+            save_config(default_config)
+            return default_config
     with open(config_path, 'r') as f:
         return json.load(f)
 
