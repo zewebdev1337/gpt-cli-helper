@@ -127,15 +127,7 @@ After installation, you can use the `gpt` command to ask questions.
       }
   }
   ```
-- **Default settings:**
-  - **Default model:** `gpt-4o`
-  - **Default temperature:** `0`
-  - **Verbose mode:** `Disabled`
-  - **Available models:**
-    - `gpt-3.5-turbo`
-    - `gpt-4`
-    - `gpt-4-turbo`
-    - `gpt-4o`
+
 ## Configuration
 
 ### Configuration file location
@@ -150,6 +142,16 @@ Starting from v2.0 you can configure several options:
 - **Default Temperature:** Change the default temperature for responses.
 - **Verbose Mode:** Enable or disable verbose mode.
 - **Add Model:** Add a new model to the model list.
+
+### Default settings
+  - **Default model:** `gpt-4o`
+  - **Default temperature:** `0`
+  - **Verbose mode:** `Disabled`
+  - **Available models:**
+    - `gpt-3.5-turbo`
+    - `gpt-4`
+    - `gpt-4-turbo`
+    - `gpt-4o`
 
 ### Modify defaults
 
