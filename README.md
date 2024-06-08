@@ -45,6 +45,9 @@ After installation, you can use the `gpt` command to ask questions.
   ```bash
   gpt [<model>] <question> [--temp=<TEMP>] [--verbose]
   ```
+
+  Default models: `3.5, 4, 4-turbo, 4o`
+
   Example:
   ```bash
   $ gpt 3.5 How to change directory in Linux?
