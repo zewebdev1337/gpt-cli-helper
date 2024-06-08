@@ -142,7 +142,7 @@ Starting from v2.0 you can configure several options:
 
 ## Compatibility
 
-The tool is designed for Linux and support for other OSes is not planned.
+The tool is designed for Linux and support for other OSes is not planned. If you want support for other OS, please fork or mirror the repo. PRs and issues regarding support for other OSes will be closed as `Will not implement`
 
 ## License
 
