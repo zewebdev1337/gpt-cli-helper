@@ -1,3 +1,6 @@
-openai
 pyinstaller
 python-dotenv
+openai
+mistralai
+google-generativeai
+anthropic
