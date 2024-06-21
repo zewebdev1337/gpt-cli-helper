@@ -22,7 +22,7 @@ The `install.sh` script will perform the following actions:
 ## Requirements
 
 - Python 3.6 or higher
-- OpenAI API Key
+- OpenAI/Anthropic/Mistral/Codestral/Gemini API Key
 
 ## Usage
 
@@ -43,15 +43,18 @@ After installation, you can use the `gpt` command to ask questions.
 
 - **Ask a Question:**
   ```bash
-  gpt [<model>] <question> [--temp=<TEMP>] [--verbose]
+  gpt [<model>] <question> [--temp=<TEMP>] [--verbose] [--system=<SYSTEM_MESSAGE>] [--max_tokens=<MAX_TOKENS>]
   ```
 
-  Default models: `3.5, 4, 4-turbo, 4o`
+  Default models: `3.5, 4, 4-turbo, 4o, 7b, 8x7b, 8x22b, mistral-small, mistral-medium, mistral-large, codestral, gemini-pro, gemini-flash, claude-3-5, sonnet, opus, haiku`
 
   Example:
   ```bash
   $ gpt 3.5 How to change directory in Linux?
   cd <directory_name>
+
+  $ gpt 7b How to list files in current directory in Linux?
+  ls
   ```
   **NOTICE:**
   
@@ -90,6 +93,24 @@ After installation, you can use the `gpt` command to ask questions.
   Example:
   ```bash
   $ gpt default_temp 0.5
+  ```
+
+- **Set Default Max Tokens:**
+  ```bash
+  gpt default_max_tokens=<MAX_TOKENS>
+  ```
+  Example:
+  ```bash
+  $ gpt default_temp 0.5
+  ```
+  
+- **Set Default System Message:**
+  ```bash
+  gpt default_system_message="<SYSTEM_MESSAGE>"
+  ```
+  Example:
+  ```bash
+  $ gpt default_system_message="You're a PowerShell assistant."
   ```
 
 - **Toggle Verbose Mode:**
@@ -152,6 +173,19 @@ Starting from v2.0 you can configure several options:
     - `gpt-4`
     - `gpt-4-turbo`
     - `gpt-4o`
+    - `open-mistral-7b`
+    - `open-mixtral-8x7b`
+    - `open-mixtral-8x22b`
+    - `mistral-small-latest`
+    - `mistral-medium-latest`
+    - `mistral-large-latest`
+    - `codestral-latest*`
+    - `gemini-1.5-pro-latest`
+    - `gemini-1.5-flash-latest`
+    - `claude-3-5-sonnet-20240620`
+    - `claude-3-sonnet-20240229`
+    - `claude-3-opus-20240229`
+    - `claude-3-haiku-2024030`
 
 ### Modify defaults
 
