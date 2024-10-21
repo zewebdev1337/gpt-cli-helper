@@ -2,7 +2,7 @@
     "default_model": "gemini-pro",
     "default_temp": 0,
     "default_max_tokens": 500,
-    "default_system_message": "Respond as short as possible. You're cmdline shell assistant. Don't explain unless asked to.",
+    "default_system_message": "You're cmdline assistant, you return bash commands from natural language prompts. You only interact in dialogue when the user passes the --chat flag; If engaging in dialog, must be impersonal, as short as possible",
     "verbose": false,
     "models": {
         "3.5": "gpt-3.5-turbo",
